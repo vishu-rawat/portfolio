@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+html::-webkit-scrollbar{
+    width: 10px;
+}
+html::-webkit-scrollbar-track{
+    background-color: rgb(61, 60, 60);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(to right,rgb(17, 17, 17),black);
+    width: 100%;
+    height: 100%;
+}
+
+/* Start  :) */
+
+/* For heading here */
+.heading{
+    height: 10vh;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.head{
+    color: white;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+}
+.head:hover{
+    transform: rotate(-10deg);
+    color: red;
+}
+
+/* For dp and detail */
+.container{
+    height: 60vh;
+    width: 80vw;
+    margin-top: 15vh;
+    margin-left: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+.dp{
+    width: 200px;
+    height: 200px;
+    background-image: url(./vishal3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    animation: blur 2s 1  linear;
+    transition: 0.5s ease-in-out; 
+    background-position: center;
+}
+.dp:hover{
+    box-shadow: 2px 3px 9px rgba(158, 158, 158, 0.632);
+}
+@keyframes blur{
+    from{
+        filter: blur(5px);
+    }
+}
+.first{
+    color: white;
+    font-size: 2rem;
+    z-index: 1;
+    position: relative;
+}
+.first::before{
+    content: " ";
+    transform:scaleX(0);
+    position: absolute;
+    inset: 0;
+    transform-origin: bottom left;
+    z-index: -1;
+    background-color:rgb(236, 20, 4);
+    transition: all 1s ease-in-out;
+}
+.first:hover::before{
+    transform: scaleX(1);
+}
+.last{
+    color: red;
+    font-size: 2rem;
+    transition: 1s all ease-in-out;
+}
+.firstname{
+    display: inline-block;
+    font-family: 'Sono', sans-serif;
+}
+.surname{
+    display: inline-block;
+    margin-left: 5px;
+    font-family: 'Sono', sans-serif;
+    animation: fall 1s linear  1  ;
+    z-index: 2;
+
+}
+.last:hover{
+    font-size: 3rem;
+}
+@keyframes fall{
+    from{
+        transform: translateY(-30vh);
+    }
+    to{
+        transform: translateY(0vh);
+    }
+}
+.desc{
+    width: 30vw;
+    margin-top: 20px;   
+    color: white;
+    font-family:'Sono', sans-serif;
+    animation: float 2s linear  alternate infinite;
+}
+@keyframes float{
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+/* For logo section */
+.size{
+    font-size: 50px;
+    color: red;
+    transition: color 0.2s ease-in-out;
+}
+.size:hover{
+    color: gray;
+}
+.logo{
+    height: 20vh;
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    margin-left: 12vw;
+    margin-top: 10vh;
+}
+.logo1{
+    width: 40vw;
+    height: 20vh;
+}
+.logo2{
+    width: 3vw;
+    height: 20vh;
+}
+.gmail{
+    margin-top: 2vh;
+}
+.twitter{
+    margin-top: 2vh;
+}
+.r1{
+    animation: r1 2s linear  infinite ;
+}
+.f1{
+    animation: f1 3s linear  infinite alternate;
+}
+@keyframes r1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes f1 {
+    from{
+        transform: translateX(0vw);
+    }
+    to{
+        transform: translateX(37vw);
+    }
+}
+
+.r2{
+    animation: r1 2s 3s linear  infinite ;
+}
+.f2{
+    animation: f1 3s 3s linear  infinite alternate;
+}
+@keyframes r2 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes f2 {
+    from{
+        transform: translateX(0vw);
+    }
+    to{
+        transform: translateX(30vw);
+    }
+}
+
+/* For project container */
+.projectscontainer{
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proj{
+    font-size: 3rem;
+    color: white;
+    font-style: italic;
+    font-family: 'Rubik Iso', cursive;
+    height: 10vh;
+    /* width: 20vw; */
+    transition: 1s ease-in-out;
+}
+.proj:hover{
+    color: rgb(75, 1, 1);
+}
+.poster{
+    height: 80vh;
+    width: 30vw;
+    margin-top: 3vh;
+    background-image: url(newproject2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.postercont{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* For coming soon */
+
+.comingsoon{
+    margin-top:20vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 2s linear  alternate infinite;
+}
+
+.soon{
+    color: white;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 2rem;
+}
+
+
+/* For footer */
+footer{
+    margin-top: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.copy{
+    font-size: 15px;
+    color: white;
+    font-family: 'Sono', sans-serif;
+}
+
+/* for project previw */
+.projectholder{
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin-left: 5vw;
+}
+
+.fliplink{
+    width: 25vw;
+}
+.flipkartholder{
+    background-image: url(flipkart.png);
+    width: 25vw;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+}
+.flipkartholder:hover{
+    width: 30vw;
+    height: 45vh;
+    box-shadow: 2px 2px 10px rgb(11, 116, 235);
+}
+.flipkartholder2{
+    background-image: url(usability.png);
+}
+.flipkartholder2:hover{
+    box-shadow: 2px 2px 10px rgb(235, 126, 193);
+}
+.flipkartholder3{
+    background-image: url(spotify.png);
+}
+.flipkartholder3:hover{
+    box-shadow:2px 2px 10px gray;
+}
+.flipkartholder4{
+    background-image: url(game.png);
+}
+.flipkartholder4:hover{
+    box-shadow: 2px 2px 10px rgb(148, 7, 7);
+}
+.flipkartholder5{
+    background-image: url(animation.png);
+}
+.flipkartholder5:hover{
+    box-shadow: 2px 2px 10px rgb(72, 9, 218);
+}
+.flipkartholder6{
+    background-image: url(nature.png);
+}
+.flipkartholder6:hover{
+    box-shadow: 2px 2px 10px rgb(10, 129, 30);
+}
+.flipkartholder7{
+    background-image: url(glass.png);
+}
+.flipkartholder7:hover{
+    box-shadow: 2px 2px 10px rgb(12, 207, 207);
+}
+.flipkartholder8{
+    background-image: url(blog.png);
+}
+.flipkartholder8:hover{
+    box-shadow: 2px 2px 10px rgb(247, 247, 247);
+}
+.flipkartholder9{
+    background-image: url(gym.png);
+}
+.flipkartholder9:hover{
+    box-shadow: 2px 2px 10px rgb(255, 0, 0);
+}
+.flipkartholder10{
+    background-image: url(foodah.png);
+}
+.flipkartholder10:hover{
+    box-shadow: 2px 2px 10px rgb(80, 32, 32);
+}
+.fliphead{
+    font-family: 'Alkatra', cursive;
+    color: white;
+    width: 25vw;
+    font-size: 20px;
+    text-align: center;
+}
+/* For responsive */
+@media screen and (max-width:1000px) {
+   .container{
+        margin-top: 10vh;
+        flex-wrap: wrap;
+        width: 40vw;
+        margin-left: 30vw;
+   }
+
+   .nameanddesc{
+    margin-top: -5vh;
+   }
+
+   p{
+    font-size: 20px;
+   }
+
+   .logo{
+    margin-top: 50vh;
+   }
+}
+
+@media screen and (max-width:800px) {
+    .container{
+        margin-top: 20vh;
+    }
+    .nameanddesc{
+        margin-top: 10vh;
+    }
+    .logo{
+        margin-top: 80vh;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .heading{
+        margin-top: 10vh;
+    }
+    .logo{
+        margin-top: 70vh;
+    }
+    .nameanddesc{
+        width: 100%;
+    }
+    .desc{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .container{
+        width: 100%;
+        margin-left: 0vw;
+    }
+    .nameanddesc{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .desc{
+        width: 100%;
+    }
+    .logo{
+        margin-top: 60vh;
+    }
+    .heading{
+        width: 100%;
+        margin-left: 30px;
+    }
+    .projectholder{
+        flex-direction: column;
+        gap: 20vh;
+    }
+    .flipkartholder{
+        width: 100%;
+    }
+    .fliphead{
+        width: 100%;
+        font-size:15px ;
+    }
+}
+
+@media screen and (max-width:410px) {
+    .logo{
+        margin-top: 50vh;
+    }
+    .heading{
+        margin-left: 4px;
+    }
+    .projectholder{
+        flex-direction: column;
+        gap: 20vh;
+    }
+    .flipkartholder{
+        width: 100%;
+    }
+    .fliphead{
+        width: 100%;
+        font-size:15px ;
+    }
+}
